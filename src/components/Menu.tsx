@@ -14,22 +14,21 @@ const Menu: React.FC = () => {
 
   return (
     <header className={styles.menuContainer}>
-      <nav className={styles.navbar}>
-        <div className={styles.logo}>
+      <nav>
+        <figure>
           <Image src="/joyerialogo.webp" alt="Logo" width={110} height={5} />
-        </div>
+        </figure>
         <button
-          className={styles.menuIcon}
           onClick={toggleMenu}
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
         >
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
-        <ul className={menuOpen ? styles.menuOpen : styles.menu}>
-          <li><a href="#joyas">Joyas</a></li>
-          <li><a href="#relojes">Relojes</a></li>
-          <li><a href="#accesorios">Accesorios</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+        <ul>
+          <li className={menuOpen ? styles.menuOpen : styles.menu}><a href="#joyas">Catalogo de joyas</a></li>
+          <li className={menuOpen ? styles.menuOpen : styles.menu}><a href="#relojes">Fabricacion</a></li>
+          <li className={menuOpen ? styles.menuOpen : styles.menu}><a href="#accesorios">Ventas al por mayor</a></li>
+          <li className={menuOpen ? styles.menuOpen : styles.menu}><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
     </header>
