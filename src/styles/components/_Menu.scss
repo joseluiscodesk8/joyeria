@@ -36,11 +36,15 @@
       align-items: center;
       width: 100%;
       height: 300px;
-      overflow: hidden;
+      // overflow: hidden;
 
 
       & .menuOpen {
         position: absolute;
+        display: grid;
+        place-content: center;
+        width: 100%;
+        height: 110px;
         transition: 1s ease-in-out;
       }
 
@@ -48,10 +52,6 @@
       & .menuOpen:nth-child(1) {
         left: 0;
         top: 0;
-        display: grid;
-        place-content: center;
-        width: 100%;
-        height: 110px;
         background-image: url('/li1.png');
         background-repeat: no-repeat;
         background-size: 100% 105px;
@@ -60,11 +60,7 @@
 
       & .menuOpen:nth-child(2) {
         left: 0;
-        top: 30px;
-        width: 100%;
-        height: 110px;
-        display: grid;
-        place-content: center;
+        top: 90px;
         background-image: url('/li2.png');
         background-repeat: no-repeat;
         background-size: 100% 100%;
@@ -72,11 +68,7 @@
 
       & .menuOpen:nth-child(3) {
         left: 0;
-        top: 135px;
-        width: 100%;
-        height: 110px;
-        display: grid;
-        place-content: center;
+        top: 185px;
         background-image: url('/li3.png');
         background-repeat: no-repeat;
         background-size: 100% 100%;
@@ -84,11 +76,7 @@
 
       & .menuOpen:nth-child(4) {
         left: 0;
-        top: 170px;
-        width: 100%;
-        height: 110px;
-        display: grid;
-        place-content: center;
+        top: 280px;
         background-image: url('/li4.png');
         background-repeat: no-repeat;
         background-size: 100% 100%;
@@ -96,16 +84,16 @@
 
       & .menuClosed {
         position: absolute;
+        width: 100%;
+        height: 110px;
+        display: grid;
+        place-content: center;
         transition: 1s ease-in-out;
       }
 
       & .menuClosed:nth-child(1) {
         left: -100%;
         top: 0;
-        width: 100%;
-        height: 110px;
-        display: grid;
-        place-content: center;
         background-image: url('/li1.png');
         background-repeat: no-repeat;
         background-size: 100% 100%;
@@ -114,11 +102,7 @@
 
       & .menuClosed:nth-child(2) {
         left: 100%;
-        top: 30px;
-        width: 100%;
-        height: 110px;
-        display: grid;
-        place-content: center;
+        top: 90px;
         background-image: url('/li2.png');
         background-repeat: no-repeat;
         background-size: 100% 100%;
@@ -127,11 +111,7 @@
 
       & .menuClosed:nth-child(3) {
         left: -100%;
-        top: 140px;
-        width: 100%;
-        height: 110px;
-        display: grid;
-        place-content: center;
+        top: 185px;
         background-image: url('/li3.png');
         background-repeat: no-repeat;
         background-size: 100% 100%;
@@ -140,11 +120,7 @@
 
       & .menuClosed:nth-child(4) {
         left: 100%;
-        top: 170px;
-        width: 100%;
-        height: 110px;
-        display: grid;
-        place-content: center;
+        top: 280px;
         background-image: url('/li4.png');
         background-repeat: no-repeat;
         background-size: 100% 100%;
