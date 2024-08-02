@@ -22,11 +22,13 @@
       padding: 10px;
       display: flex;
       align-items: center;
+      position: relative;
+    z-index: 10000;
     }
 
     & ul {
       position: absolute;
-      top: 50px;
+      top: 60px;
       list-style: none;
       display: flex;
       flex-direction: column;
@@ -36,85 +38,118 @@
       height: 300px;
       overflow: hidden;
 
-      & .menu {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        display: grid;
-        place-content: center;
-        transition: 0.5s ease-in-out;
-      }
-
-     
-      & .menu:nth-child(1) {
-        left: -100%;
-        background-image: url('/li1.png');
-        background-repeat: no-repeat;
-        background-size: 100% 75px;
-        background-position: center;
-      }
-
-      & .menu:nth-child(2) {
-        left: 100%;
-        background-image: url('/li2.png');
-        background-repeat: no-repeat;
-        background-size: 100% 75px;
-      }
-      & .menu:nth-child(3) {
-        left: -100%;
-        background-image: url('/li3.png');
-        background-repeat: no-repeat;
-        background-size: 100% 75px;
-      }
-      & .menu:nth-child(4) {
-        left: 100%;
-        background-image: url('/li4.png');
-        background-repeat: no-repeat;
-        background-size: 100% 75px;
-      }
 
       & .menuOpen {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        display: grid;
-        place-content: center;
-        // background-color: #b4d308;
-        // box-shadow:  0 0 10px #000;
-        transition: 0.5s ease-in-out;
+        position: absolute;
+        transition: 1s ease-in-out;
       }
 
 
       & .menuOpen:nth-child(1) {
-        position: relative;
         left: 0;
+        top: 0;
+        display: grid;
+        place-content: center;
+        width: 100%;
+        height: 110px;
         background-image: url('/li1.png');
         background-repeat: no-repeat;
         background-size: 100% 105px;
-        z-index: -1000;
         
       }
 
       & .menuOpen:nth-child(2) {
         left: 0;
+        top: 30px;
+        width: 100%;
+        height: 110px;
+        display: grid;
+        place-content: center;
         background-image: url('/li2.png');
         background-repeat: no-repeat;
-        background-size: 100% 75px;
-      }
-      & .menuOpen:nth-child(3) {
-        left: 0;
-        background-image: url('/li3.png');
-        background-repeat: no-repeat;
-        background-size: 100% 75px;
-      }
-      & .menuOpen:nth-child(4) {
-        left: 0;
-        background-image: url('/li4.png');
-        background-repeat: no-repeat;
-        background-size: 100% 75px;
+        background-size: 100% 100%;
       }
 
-      
+      & .menuOpen:nth-child(3) {
+        left: 0;
+        top: 135px;
+        width: 100%;
+        height: 110px;
+        display: grid;
+        place-content: center;
+        background-image: url('/li3.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+
+      & .menuOpen:nth-child(4) {
+        left: 0;
+        top: 170px;
+        width: 100%;
+        height: 110px;
+        display: grid;
+        place-content: center;
+        background-image: url('/li4.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+
+      & .menuClosed {
+        position: absolute;
+        transition: 1s ease-in-out;
+      }
+
+      & .menuClosed:nth-child(1) {
+        left: -100%;
+        top: 0;
+        width: 100%;
+        height: 110px;
+        display: grid;
+        place-content: center;
+        background-image: url('/li1.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+      }
+
+      & .menuClosed:nth-child(2) {
+        left: 100%;
+        top: 30px;
+        width: 100%;
+        height: 110px;
+        display: grid;
+        place-content: center;
+        background-image: url('/li2.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+      }
+
+      & .menuClosed:nth-child(3) {
+        left: -100%;
+        top: 140px;
+        width: 100%;
+        height: 110px;
+        display: grid;
+        place-content: center;
+        background-image: url('/li3.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+      }
+
+      & .menuClosed:nth-child(4) {
+        left: 100%;
+        top: 170px;
+        width: 100%;
+        height: 110px;
+        display: grid;
+        place-content: center;
+        background-image: url('/li4.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+      }
 
     }
   }

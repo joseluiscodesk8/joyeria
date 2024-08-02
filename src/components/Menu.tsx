@@ -25,10 +25,10 @@ const Menu: React.FC = () => {
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
         <ul>
-          <li className={menuOpen ? styles.menuOpen : styles.menu}><a href="#joyas">Catalogo de joyas</a></li>
-          <li className={menuOpen ? styles.menuOpen : styles.menu}><a href="#relojes">Fabricacion</a></li>
-          <li className={menuOpen ? styles.menuOpen : styles.menu}><a href="#accesorios">Ventas al por mayor</a></li>
-          <li className={menuOpen ? styles.menuOpen : styles.menu}><a href="#contacto">Contacto</a></li>
+          <li className={menuOpen ? styles.menuOpen : styles.menuClosed}><a href="#joyas">Catalogo de joyas</a></li>
+          <li className={menuOpen ? styles.menuOpen : styles.menuClosed}><a href="#relojes">Fabricacion</a></li>
+          <li className={menuOpen ? styles.menuOpen : styles.menuClosed}><a href="#accesorios">Ventas al por mayor</a></li>
+          <li className={menuOpen ? styles.menuOpen : styles.menuClosed}><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
     </header>
