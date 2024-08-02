@@ -45,12 +45,32 @@
         transition: 0.5s ease-in-out;
       }
 
-      & .menu:nth-child(1), .menu:nth-child(3) {
+     
+      & .menu:nth-child(1) {
         left: -100%;
+        background-image: url('/li1.png');
+        background-repeat: no-repeat;
+        background-size: 100% 75px;
+        background-position: center;
       }
 
-      & .menu:nth-child(2), .menu:nth-child(4) {
+      & .menu:nth-child(2) {
         left: 100%;
+        background-image: url('/li2.png');
+        background-repeat: no-repeat;
+        background-size: 100% 75px;
+      }
+      & .menu:nth-child(3) {
+        left: -100%;
+        background-image: url('/li3.png');
+        background-repeat: no-repeat;
+        background-size: 100% 75px;
+      }
+      & .menu:nth-child(4) {
+        left: 100%;
+        background-image: url('/li4.png');
+        background-repeat: no-repeat;
+        background-size: 100% 75px;
       }
 
       & .menuOpen {
@@ -59,14 +79,43 @@
         height: 100%;
         display: grid;
         place-content: center;
-        background-color: #b4d308;
-        box-shadow:  0 0 10px #000;
+        // background-color: #b4d308;
+        // box-shadow:  0 0 10px #000;
         transition: 0.5s ease-in-out;
       }
 
-      & .menuOpen:nth-child(1), .menuOpen:nth-child(2), .menuOpen:nth-child(3), .menuOpen:nth-child(4) {
+
+      & .menuOpen:nth-child(1) {
+        position: relative;
         left: 0;
+        background-image: url('/li1.png');
+        background-repeat: no-repeat;
+        background-size: 100% 105px;
+        z-index: -1000;
+        
       }
+
+      & .menuOpen:nth-child(2) {
+        left: 0;
+        background-image: url('/li2.png');
+        background-repeat: no-repeat;
+        background-size: 100% 75px;
+      }
+      & .menuOpen:nth-child(3) {
+        left: 0;
+        background-image: url('/li3.png');
+        background-repeat: no-repeat;
+        background-size: 100% 75px;
+      }
+      & .menuOpen:nth-child(4) {
+        left: 0;
+        background-image: url('/li4.png');
+        background-repeat: no-repeat;
+        background-size: 100% 75px;
+      }
+
+      
+
     }
   }
 }
