@@ -1,8 +1,11 @@
 'use client'
 
 import React, { useState } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
 import Image from 'next/image';
+import Link from 'next/link';
+
+import { FaBars, FaTimes } from 'react-icons/fa';
+
 import styles from '../styles/index.module.scss';
 
 const Menu: React.FC = () => {
@@ -25,10 +28,10 @@ const Menu: React.FC = () => {
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
         <ul>
-          <li className={menuOpen ? styles.menuOpen : styles.menuClosed}><a href="#joyas">Catalogo de joyas</a></li>
-          <li className={menuOpen ? styles.menuOpen : styles.menuClosed}><a href="#relojes">Fabricacion</a></li>
-          <li className={menuOpen ? styles.menuOpen : styles.menuClosed}><a href="#accesorios">Ventas al por mayor</a></li>
-          <li className={menuOpen ? styles.menuOpen : styles.menuClosed}><a href="#contacto">Contacto</a></li>
+          <li className={menuOpen ? styles.menuOpen : styles.menuClosed}><Link href="/joyas">Catalogo de joyas</Link></li>
+          <li className={menuOpen ? styles.menuOpen : styles.menuClosed}><Link href="#relojes">Fabricacion</Link></li>
+          <li className={menuOpen ? styles.menuOpen : styles.menuClosed}><Link href="#accesorios">Relojes y  Prendas en Plata</Link></li>
+          <li className={menuOpen ? styles.menuOpen : styles.menuClosed}><Link href="#contacto">Contacto</Link></li>
         </ul>
       </nav>
     </header>
