@@ -19,7 +19,7 @@ const Menu: React.FC = () => {
     }
 
     switch (path) {
-      case '/Joyas':
+      case '/Catalogo':
         return 'Catalogo de joyas';
       case '/Fabricacion':
         return 'Fabricacion';
@@ -50,7 +50,7 @@ const Menu: React.FC = () => {
         </button>
         <ul>
           <li className={menuOpen ? styles.menuOpen : styles.menuClosed}>
-            <Link href={getMenuItemHref('/Joyas')}>{getMenuItemName('/Joyas')}</Link>
+            <Link href={getMenuItemHref('/Catalogo')}>{getMenuItemName('/Catalogo')}</Link>
           </li>
           <li className={menuOpen ? styles.menuOpen : styles.menuClosed}>
             <Link href={getMenuItemHref('/Fabricacion')}>{getMenuItemName('/Fabricacion')}</Link>
