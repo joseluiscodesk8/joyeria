@@ -9,6 +9,7 @@ import { EffectCoverflow } from 'swiper/modules';
 
 import joyas from '../data/jolleria.json';
 import styles from '../styles/index.module.scss';
+import { useMenu } from '../context/MenuContext';
 
 interface Joya {
   imagen: string;
@@ -21,14 +22,16 @@ interface Joya {
 
 const Zarcillos: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const { menuOpen } = useMenu();
 
   return (
     <motion.section
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
+      className={menuOpen ? styles.menuOpen : ''}
     >
-      <div className={styles.catalogo}>
+      <div className={styles.catalogo} style={{ opacity: menuOpen ? 0 : 1 }}>
         <h1>Zarcillos</h1>
         <div className={styles['swiper-container']}>
           <Swiper

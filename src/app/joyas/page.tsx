@@ -1,7 +1,9 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import dynamic from "next/dynamic";
+import { useMenu } from '../../context/MenuContext';
+import styles from '../../styles/index.module.scss';
 
 const DynamicCadenas = dynamic(() => import('../../components/Cadenas'));
 const DynamicAnillos = dynamic(() => import('../../components/Anillos'));
@@ -10,6 +12,7 @@ const DynamicZarcillos = dynamic(() => import('../../components/Zarcillos'));
 
 const CatalogoJoyas: React.FC = () => {
     const [selectedComponent, setSelectedComponent] = useState('Cadenas');
+    const { menuOpen } = useMenu(); 
 
     const renderComponent = () => {
         switch (selectedComponent) {
@@ -25,17 +28,17 @@ const CatalogoJoyas: React.FC = () => {
     }
 
     return (
-        <>
+        <main className={`${styles.main} ${menuOpen ? styles.menuAbierto : ''}`}>
             <h1>Catálogo de Joyas</h1>
-            <div>
+            <section className={styles.buttonsContainer}>
                 <button onClick={() => setSelectedComponent('Cadenas')}>Cadenas</button>
                 <button onClick={() => setSelectedComponent('Anillos')}>Anillos</button>
                 <button onClick={() => setSelectedComponent('Pulseras')}>Pulseras</button>
                 <button onClick={() => setSelectedComponent('Zarcillos')}>Zarcillos</button>
-            </div>
+            </section>
             {renderComponent()}
-        </>
-    )
+        </main>
+    );
 }
 
 export default CatalogoJoyas;

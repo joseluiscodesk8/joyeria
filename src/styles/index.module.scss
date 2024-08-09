@@ -1,24 +1,11 @@
 @use './components/Menu';
+@use './components/Catalogo';
 
-.catalogo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  
-    .swiper-container {
-      width: 80%;
-      margin-bottom: 20px;
-    }
-  
-    .joya {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 250px;
-    }
-  
-    .joya-details {
-      text-align: center;
-    }
+
+.main {
+    transition: opacity 0.3s ease;
   }
   
+.menuAbierto {
+    display: none;
+  }
