@@ -1,10 +1,14 @@
 import dynamic from "next/dynamic";
+import { Inter } from "next/font/google";
+
 
 import { MenuProvider } from '../../context/MenuContext';
 import "../../styles/globals.scss";
 
 
 const DynamicMenu = dynamic(() => import('../../components/Menu'));
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: 'Next.js',
@@ -18,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <MenuProvider><body><DynamicMenu />{children}</body></MenuProvider>
+      <MenuProvider><body className={inter.className}><DynamicMenu />{children}</body></MenuProvider>
     </html>
   )
 }

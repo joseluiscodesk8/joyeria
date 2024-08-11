@@ -38,6 +38,7 @@
       width: 100%;
       height: 400px;
       overflow: hidden;
+      
 
 
       & .menuOpen {
@@ -47,6 +48,16 @@
         width: 100%;
         height: 110px;
         transition: 1s ease-in-out;
+
+        & a {
+          text-decoration: none;
+          font-size: 1.2rem;
+          font-weight: 600;
+          letter-spacing: 0.2rem;
+          color: #fff;
+          text-shadow: 0 2px 5px #000, 0 0 2px #000;
+          transition: 1s ease-in-out;
+        }
       }
 
 
@@ -90,6 +101,15 @@
         display: grid;
         place-content: center;
         transition: 1s ease-in-out;
+
+        & a {
+          text-decoration: none;
+          font-size: 1.2rem;
+          font-weight: 600;
+          letter-spacing: 0.2rem;
+          color: #fff;
+          transition: 1s ease-in-out;
+        }
       }
 
       & .menuClosed:nth-child(1) {
