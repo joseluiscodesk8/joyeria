@@ -34,8 +34,8 @@ const Pulseras: React.FC = () => {
   const { menuOpen } = useMenu();
 
   return (
-    <section className={menuOpen ? styles.menuOpen : ""}>
-      <main className={styles.catalogo} style={{ opacity: menuOpen ? 0 : 1 }}>
+    <section>
+      <main className={`${styles.catalogo} ${menuOpen ? styles.menuAbierto : ''}`}>
         <h1>Pulseras</h1>
         <div className={styles["swiper-container"]}>
           <Swiper

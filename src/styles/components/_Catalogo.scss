@@ -4,6 +4,7 @@
     align-items: center;
     transition: opacity 1s ease;
     height: 650px;
+    opacity: 1;
 
     & h1 {
       letter-spacing: 1px;
@@ -51,12 +52,9 @@
     }
   }
 
-  .menuOpen .catalogo {
-    opacity: 0;
-  }
 
 
-  .buttonsContainer {
+.buttonsContainer {
     width: 100%;
     max-width: 600px;
     height: 80px;
@@ -77,4 +75,22 @@
         font-weight: 600;
 
     }
+}
+
+.main {
+  transition: opacity 0.3s ease;
+  position: relative;
+  z-index: 1000;
+  opacity: 1;
+  & h1 {
+    letter-spacing: 1px;
+    color: #ffd700;
+    text-shadow: 0 5px 5px #000, 0 2px 5px #000,0 2px 5px #000;
+  }
+}
+
+.menuAbierto {
+  opacity: 0;
+  position: relative;
+  z-index: -1000;
 }

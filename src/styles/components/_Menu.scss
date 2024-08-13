@@ -24,7 +24,7 @@
       align-items: center;
       position: relative;
       z-index: 10000;
-      color: #967f01;
+      color: #000;
     }
 
     & ul {
@@ -36,8 +36,7 @@
       justify-content: space-evenly;
       align-items: center;
       width: 100%;
-      height: 400px;
-      
+      height: 500px;
       overflow: hidden;
 
       & .menuOpen {
@@ -64,33 +63,25 @@
       & .menuOpen:nth-child(1) {
         left: 0;
         top: 0;
-        background-image: url("/li1.png");
-        background-repeat: no-repeat;
-        background-size: 100% 105px;
+        box-shadow: inset 0 -15px 15px #332c01;
       }
 
       & .menuOpen:nth-child(2) {
         left: 0;
-        top: 90px;
-        background-image: url("/li2.png");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
+        top: 110px;
+        box-shadow: inset 0 -15px 15px #332c01;
       }
 
       & .menuOpen:nth-child(3) {
         left: 0;
-        top: 185px;
-        background-image: url("/li3.png");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
+        top: 220px;
+        box-shadow: inset 0 -15px 15px #332c01;
       }
 
       & .menuOpen:nth-child(4) {
         left: 0;
-        top: 280px;
-        background-image: url("/li4.png");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
+        top: 330px;
+        box-shadow: inset 0 -15px 15px #332c01;
       }
 
       & .menuClosed {
@@ -114,37 +105,25 @@
       & .menuClosed:nth-child(1) {
         left: -100%;
         top: 0;
-        background-image: url("/li1.png");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        background-position: center;
+        box-shadow: inset 0 -2px 2px #332c01;
       }
 
       & .menuClosed:nth-child(2) {
         left: 100%;
-        top: 90px;
-        background-image: url("/li2.png");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        background-position: center;
+        top: 110px;
+        box-shadow: inset 0 -2px 2px #332c01;
       }
 
       & .menuClosed:nth-child(3) {
         left: -100%;
-        top: 185px;
-        background-image: url("/li3.png");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        background-position: center;
+        top: 220px;
+        box-shadow: inset 0 -2px 2px #332c01;
       }
 
       & .menuClosed:nth-child(4) {
         left: 100%;
-        top: 280px;
-        background-image: url("/li4.png");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        background-position: center;
+        top: 330px;
+        box-shadow: inset 0 -2px 2px #332c01;
       }
     }
   }

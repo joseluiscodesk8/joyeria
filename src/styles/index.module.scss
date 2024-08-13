@@ -2,26 +2,32 @@
 @use './components/Catalogo';
 
 
-.main {
-    transition: opacity 0.3s ease;
-    position: relative;
-    z-index: 1000;
-    & h1 {
-      letter-spacing: 1px;
-      color: #ffd700;
-      text-shadow: 0 5px 5px #000, 0 2px 5px #000,0 2px 5px #000;
-    }
-  }
-  
-.menuAbierto {
-    display: none;
-  }
-
-
-  .Pie {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     width: 100%;
     height: 350px;
-    color: #fff;
+    color: #ffd700;
+    text-shadow:  0 2px 2px #000;
+    letter-spacing: 1px;
     text-align: center;
-    border: 1px solid #fff;
+
+    & div {
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+      & a {
+        color: #ffd700;
+        font-size: 2rem;
+        text-shadow: 0 0 5px #000;
+      }
+    }
+
+    & section {
+      display: flex;
+      flex-direction: column;
+      height: 100px;
+      justify-content: space-evenly;
+    }
   }
