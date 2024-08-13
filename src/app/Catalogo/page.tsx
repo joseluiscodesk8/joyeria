@@ -30,7 +30,7 @@ const CatalogoJoyas: React.FC = () => {
 
     const buttonVariants = {
         focused: { 
-            boxShadow: 'inset 0 5px 10px rgba(0, 0, 0, 0.5)',
+            boxShadow: 'inset 0 5px 20px rgba(0, 0, 0, 0.5)',
             transition: { duration: 0.3 }
         },
         unfocused: { 

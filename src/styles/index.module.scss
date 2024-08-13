@@ -4,6 +4,11 @@
 
 .main {
     transition: opacity 0.3s ease;
+    & h1 {
+      letter-spacing: 1px;
+      color: #ffd700;
+      text-shadow: 0 5px 5px #000, 0 2px 5px #000,0 2px 5px #000;
+    }
   }
   
 .menuAbierto {

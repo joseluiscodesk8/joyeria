@@ -1,7 +1,8 @@
-import { useState } from "react";
-import Image from "next/image";
+/* eslint-disable react/display-name */
+/* eslint-disable jsx-a11y/alt-text */
+import { useState, forwardRef } from "react";
+import Image, { ImageProps } from "next/image";
 import { motion } from "framer-motion";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -20,13 +21,21 @@ interface Joya {
   medidas: string;
 }
 
+// Crear un componente MotionImage combinando motion con Image
+const MotionImage = motion(
+  forwardRef<HTMLImageElement, ImageProps>((props, ref) => (
+    <Image {...props} ref={ref as any} />
+  ))
+);
+
+
 const Zarcillos: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const { menuOpen } = useMenu();
 
   return (
     <section className={menuOpen ? styles.menuOpen : ""}>
-      <div className={styles.catalogo} style={{ opacity: menuOpen ? 0 : 1 }}>
+      <main className={styles.catalogo} style={{ opacity: menuOpen ? 0 : 1 }}>
         <h1>Zarcillos</h1>
         <div className={styles["swiper-container"]}>
           <Swiper
@@ -46,18 +55,17 @@ const Zarcillos: React.FC = () => {
           >
             {joyas.map((joya: Joya, index: number) => (
               <SwiperSlide key={index}>
-                <motion.picture
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-                >
-                  <Image
+                <picture>
+                  <MotionImage
                     src={joya.imagen}
                     alt={joya.nombre}
                     width={200}
                     height={200}
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
                   />
-                </motion.picture>
+                </picture>
               </SwiperSlide>
             ))}
           </Swiper>
@@ -69,7 +77,7 @@ const Zarcillos: React.FC = () => {
           <p>Peso: {joyas[activeIndex].peso}</p>
           <p>Medidas: {joyas[activeIndex].medidas}</p>
         </article>
-      </div>
+      </main>
     </section>
   );
 };

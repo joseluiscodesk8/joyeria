@@ -1,5 +1,7 @@
-import { useState } from "react";
-import Image from "next/image";
+/* eslint-disable react/display-name */
+/* eslint-disable jsx-a11y/alt-text */
+import { useState, forwardRef } from "react";
+import Image, { ImageProps } from "next/image";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -18,6 +20,14 @@ interface Joya {
   peso: string;
   medidas: string;
 }
+
+// Crear un componente MotionImage combinando motion con Image
+const MotionImage = motion(
+  forwardRef<HTMLImageElement, ImageProps>((props, ref) => (
+    <Image {...props} ref={ref as any} />
+  ))
+);
+
 
 const Catalogo: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -45,18 +55,17 @@ const Catalogo: React.FC = () => {
           >
             {joyas.map((joya: Joya, index: number) => (
               <SwiperSlide key={index}>
-                <motion.picture
-                  initial={{ opacity: 0, y: 100 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1 }}
-                >
-                  <Image
+                <picture>
+                  <MotionImage
                     src={joya.imagen}
                     alt={joya.nombre}
                     width={200}
                     height={200}
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
                   />
-                </motion.picture>
+                </picture>
               </SwiperSlide>
             ))}
           </Swiper>
