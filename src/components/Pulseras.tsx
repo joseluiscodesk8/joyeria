@@ -37,7 +37,8 @@ const Pulseras: React.FC = () => {
     <section>
       <main className={`${styles.catalogo} ${menuOpen ? styles.menuAbierto : ''}`}>
         <h1>Pulseras</h1>
-        <div className={styles["swiper-container"]}>
+        <section className={styles["swiper-container"]}>
+          <picture>
           <Swiper
             effect={"coverflow"}
             grabCursor={true}
@@ -69,7 +70,8 @@ const Pulseras: React.FC = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
+          </picture>
+        </section>
         <article className={styles["joya-details"]}>
           <h2>{joyas[activeIndex].nombre}</h2>
           <p>Kilataje: {joyas[activeIndex].kilataje}</p>
