@@ -2,38 +2,9 @@
 @use './components/Catalogo';
 
 
-  .footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 350px;
-    color: #ffd700;
-    text-shadow:  0 2px 2px #000;
-    letter-spacing: 1px;
-    text-align: center;
-
-    & div {
-      display: flex;
-      width: 100%;
-      justify-content: space-evenly;
-      & a {
-        color: #ffd700;
-        font-size: 2rem;
-        text-shadow: 0 0 5px #000;
-      }
-    }
-
-    & section {
-      display: flex;
-      flex-direction: column;
-      height: 100px;
-      justify-content: space-evenly;
-    }
-  }
 
 
-  .services {
+  .Servicios {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -66,7 +37,8 @@
       p {
         font-size: 1em;
         text-align: center;
-        color: #000;
+        color: #fff;
+        text-shadow: 0 0 5px #000;
         font-family: cursive;
         letter-spacing: .1rem;
         font-weight: 800;
@@ -80,3 +52,85 @@
     position: relative;
     z-index: -1000;
   }
+
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    color: #ffbb00;
+    width: 100%;
+    height: 350px;
+  
+    .contactInfo {
+      h3 {
+        font-size: 1.2rem;
+      }
+  
+      .contactDetails {
+  
+        a {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          font-size: 1rem;
+          color: #ffbb00;
+  
+          &:hover {
+            color: #0070f3;
+          }
+        }
+      }
+  
+      .socialMedia {
+        a {
+          color: #333;
+          font-size: 1.5rem;
+          color: #ffbb00;
+          padding: 1rem;
+  
+          &:hover {
+            color: #0070f3;
+          }
+        }
+      }
+    }
+  
+    .info {
+  
+      h3 {
+        font-size: 1.2rem;
+      }
+  
+      ul {
+        list-style: none;
+  
+        li {
+      
+  
+          a {
+            color: #333;
+            text-decoration: none;
+            font-size: 1rem;
+            color: #ffbb00;
+  
+            &:hover {
+              color: #0070f3;
+            }
+          }
+        }
+      }
+    }
+  
+    .copyright {
+      font-size: 0.9rem;
+      color: #666;
+  
+      p {
+        color: #ffbb00;
+      }
+    }
+  }
+  

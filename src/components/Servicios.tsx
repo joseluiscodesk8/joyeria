@@ -4,8 +4,7 @@ import { MdWatch } from 'react-icons/md';
 
 import styles from '../styles/index.module.scss';
 
-const Services: React.FC = () => {
-    
+const Servicios: React.FC = () => {
 
     const sections = [
     {
@@ -36,7 +35,7 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <main className={styles.services}>
+    <main className={styles.Servicios}>
       {sections.map((section, index) => (
         <div key={index}>
           <span>{section.icon}</span>
@@ -48,4 +47,4 @@ const Services: React.FC = () => {
   );
 };
 
-export default Services;
+export default Servicios;
