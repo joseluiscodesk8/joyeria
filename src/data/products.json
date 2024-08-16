@@ -1,0 +1,51 @@
+{
+  "products": [
+    {
+      "image": "/pulso_cubano.jpeg",
+      "name": "Pulso cubano",
+      "details": {
+        "weight": "25gr",
+        "material": "18k Italian gold 750",
+        "length": "21cm"
+      }
+    },
+    {
+      "image": "/cadena_cubana.jpeg",
+      "name": "Cadena cubana",
+      "details": {
+        "clasp": "With safety clasp",
+        "material": "18k Italian gold 750",
+        "length": "60cm",
+        "thickness": "7mm",
+        "weight": "106gr"
+      }
+    },
+    {
+      "image": "/anillos_matrimonio.jpeg",
+      "name": "Anillos de matrimonio",
+      "details": {
+        "material": "18k National gold",
+        "thickness": "4mm",
+        "weight": "10gr for all 3 rings"
+      }
+    },
+    {
+      "image": "/zarcillos_gucci.jpeg",
+      "name": "Zarcillos Gucci",
+      "details": {
+        "material": "18k Italian gold 750",
+        "dimensions": "10x8mm",
+        "weight": "1.5gr"
+      }
+    },
+    {
+      "image": "/zarcillo_punto_luz.jpeg",
+      "name": "Zarcillo punto luz",
+      "details": {
+        "colors": ["Rosado", "Blanco", "Negro"],
+        "material": "18k National gold",
+        "weight": "1gr"
+      }
+    }
+  ]
+}
