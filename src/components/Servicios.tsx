@@ -3,6 +3,7 @@ import { MdWatch } from 'react-icons/md';
 
 
 import styles from '../styles/index.module.scss';
+import { useMenu } from '../context/MenuContext';
 
 const Servicios: React.FC = () => {
 

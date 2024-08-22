@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import dynamic from "next/dynamic";
 import { useMenu } from '../../context/MenuContext';
 import { motion } from 'framer-motion';

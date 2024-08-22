@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
   return (
     <footer className={styles.footer}>
       <picture>
-        <Image src="/joyerialogo2.webp" alt="Logo" width={110} height={35} />
+        <Image src="/joyerialogo.webp" alt="Logo" width={110} height={35} />
       </picture>
 
       <section className={styles.contactInfo}>
