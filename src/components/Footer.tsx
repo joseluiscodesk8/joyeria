@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
           transition={{ duration: 0.3 }}
           style={{ overflow: 'hidden' }}
         >
-          <address className={styles.contactDetails}>
+          <address>
             <a href="tel:+1234567890">
               <FaPhone /> +1234567890
             </a>

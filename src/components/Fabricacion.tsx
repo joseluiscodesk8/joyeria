@@ -7,6 +7,7 @@ import { EffectCoverflow } from "swiper/modules";
 
 import styles from "../styles/index.module.scss";
 import productsData from "../data/products.json";
+import { useMenu } from "../context/MenuContext";
 
 interface Product {
   image: string;
@@ -24,12 +25,13 @@ interface Product {
 
 const Fabricacion: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const { menuOpen } = useMenu();
   const products: Product[] = productsData.products;
 
   return (
     <section>
       <main className={styles.fabricacion}>
-        <section className={styles.container}>
+        <section className={`${styles.container} ${menuOpen ? styles.menuAbierto : ''}`}>
           <picture>
             <Swiper
               effect={"coverflow"}
@@ -60,11 +62,7 @@ const Fabricacion: React.FC = () => {
               ))}
             </Swiper>
           </picture>
-        </section>
-      </main>
-
-      {/* Aquí usamos el activeIndex para mostrar el producto correspondiente */}
-      <menu className={styles.menu}>
+          <menu className={styles.menu}>
       <h2>{products[activeIndex].name}</h2>
       <ul>
         {Object.entries(products[activeIndex].details).map(([key, value]) => (
@@ -75,6 +73,8 @@ const Fabricacion: React.FC = () => {
         ))}
       </ul>
       </menu>
+        </section>
+      </main>
     </section>
   );
 };

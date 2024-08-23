@@ -5,7 +5,11 @@ import { MdWatch } from 'react-icons/md';
 import styles from '../styles/index.module.scss';
 import { useMenu } from '../context/MenuContext';
 
+
+
 const Servicios: React.FC = () => {
+
+  const { menuOpen } = useMenu();
 
     const sections = [
     {
@@ -28,15 +32,10 @@ const Servicios: React.FC = () => {
       title: 'Joyería en Plata',
       description: 'Descubre nuestra colección de joyas de plata fina.',
     },
-    {
-      icon: <FaPhoneAlt />,
-      title: 'Contactos',
-      description: 'Contáctanos para más información o consultas.',
-    },
   ];
 
   return (
-    <main className={styles.Servicios}>
+    <main className={`${styles.Servicios} ${menuOpen ? styles.menuAbierto : ""}`}>
       {sections.map((section, index) => (
         <div key={index}>
           <span>{section.icon}</span>
