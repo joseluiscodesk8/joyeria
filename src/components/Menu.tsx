@@ -26,7 +26,7 @@ const Menu: React.FC = () => {
         return 'Fabricacion';
       case '/RelojesYPlata':
         return 'Relojes y Prendas en Plata';
-      case '/contacto':
+      case '/Contacto':
         return 'Contacto';
       default:
         return '';
@@ -60,7 +60,7 @@ const Menu: React.FC = () => {
             <Link href={getMenuItemHref('/RelojesYPlata')}>{getMenuItemName('/RelojesYPlata')}</Link>
           </li>
           <li className={menuOpen ? styles.menuOpen : styles.menuClosed}>
-            <Link href={getMenuItemHref('/contacto')}>{getMenuItemName('/contacto')}</Link>
+            <Link href={getMenuItemHref('/Contacto')}>{getMenuItemName('/Contacto')}</Link>
           </li>
         </ul>
       </nav>
