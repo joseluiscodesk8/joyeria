@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     gap: 20px;
-    opacity: 1;
+    transition: 1s ease-in-out;
   
     div {
       display: flex;

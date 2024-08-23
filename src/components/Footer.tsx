@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
   return (
     <footer className={styles.footer}>
       <picture>
-        <Image src="/joyerialogo.webp" alt="Logo" width={110} height={35} />
+        <Image src="/joyerialogo.webp" alt="Logo" width={120} height={35} />
       </picture>
 
       <section className={styles.contactInfo}>
@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
       </nav>
 
       <section className={styles.copyright}>
-        <p>Copyright©2020 Alpha Trading. All Rights Reserved</p>
+        <p>Copyright©2024 Alpha Trading. All Rights Reserved</p>
         <p>Powered by Logoscorp</p>
       </section>
     </footer>
