@@ -2,9 +2,15 @@
 
 import dynamic from "next/dynamic"
 
+const DynamicSlider = dynamic(() => import('../../components/Slider'));
 const DynamicService = dynamic(() => import('../../components/Servicios'));
-const DynamicCadenas = dynamic(() => import('../../components/Cadenas'));
+
 
 export default function Home() {
-  return <DynamicService />
+  return (
+    <>
+    <DynamicSlider />
+    <DynamicService />
+    </>
+  )
 }
