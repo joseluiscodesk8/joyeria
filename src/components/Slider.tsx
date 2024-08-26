@@ -41,7 +41,10 @@ const Slider: React.FC = () => {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <Image src={slide.src} alt={slide.alt} width={500} height={500} />
+            <picture className={styles.imageSlider}>
+            <Image src={slide.src} alt={slide.alt}  layout="fill" 
+    objectFit="cover"  />
+            </picture>
           </SwiperSlide>
         ))}
       </Swiper>
