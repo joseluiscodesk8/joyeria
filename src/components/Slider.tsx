@@ -1,12 +1,8 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-
 import 'swiper/css';
 import 'swiper/css/effect-creative';
 import 'swiper/css/autoplay';
-
-
 import { EffectCreative, Autoplay } from 'swiper/modules';
 import Image from 'next/image';
 
@@ -32,10 +28,10 @@ const Slider: React.FC = () => {
           },
         }}
         autoplay={{
-          delay: 2500, // Adjust the delay as needed
-          disableOnInteraction: false, // Keeps autoplay active after interactions
+          delay: 2500, 
+          disableOnInteraction: false, 
         }}
-        loop={true} // Enables infinite looping
+        loop={true} 
         modules={[EffectCreative, Autoplay]}
         className="mySwiper"
       >

@@ -29,6 +29,17 @@ const nextConfig = {
           protocol: 'https',
           hostname: 'kevins.com.co',
         },
+        {
+          protocol: 'https',
+          hostname: 'c4.wallpaperflare.com',
+        },   {
+          protocol: 'https',
+          hostname: 'm.media-amazon.com', 
+        },
+        {
+          protocol: 'https',
+          hostname: 'http2.mlstatic.com', 
+        },
       ]
     },
       sassOptions: {

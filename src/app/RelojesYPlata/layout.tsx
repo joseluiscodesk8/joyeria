@@ -7,6 +7,7 @@ import "../../styles/globals.scss";
 
 
 const DynamicMenu = dynamic(() => import('../../components/Menu'));
+const DynamicFooter = dynamic(() => import('../../components/Footer'));
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <MenuProvider><body className={inter.className}><DynamicMenu />{children}</body></MenuProvider>
+      <MenuProvider><body className={inter.className}><DynamicMenu />{children} <DynamicFooter /></body></MenuProvider>
     </html>
   )
 }

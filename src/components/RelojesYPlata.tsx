@@ -1,43 +1,31 @@
 /* eslint-disable react/display-name */
 /* eslint-disable jsx-a11y/alt-text */
+
 import { useState, forwardRef } from "react";
 import Image, { ImageProps } from "next/image";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
-import { EffectCoverflow } from "swiper/modules";
+import { EffectCoverflow, Autoplay  } from "swiper/modules";
 
-import joyas from "../data/jolleria.json";
-import styles from "../styles/index.module.scss";
+import styles from '../styles/index.module.scss';
+import data from '../data/relojesyplata.json';
 import { useMenu } from "../context/MenuContext";
-
-interface Joya {
-  imagen: string;
-  nombre: string;
-  kilataje: string;
-  tipo: string;
-  peso: string;
-  medidas: string;
-}
 
 
 const MotionImage = motion(
-  forwardRef<HTMLImageElement, ImageProps>((props, ref) => (
-    <Image {...props} ref={ref as any} />
-  ))
-);
+    forwardRef<HTMLImageElement, ImageProps>((props, ref) => (
+      <Image {...props} ref={ref as any} />
+    ))
+  )
 
-const Catalogo: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const { menuOpen } = useMenu();
-
-  return (
-    <main
-      className={`${styles.catalogo} ${menuOpen ? styles.menuAbierto : ""}`}
-    >
-      <h1>Cadenas</h1>
-      <section className={styles["swiper-container"]}>
+const RelojesYPlata: React.FC = () => {
+    const [activeIndex, setActiveIndex] = useState(0);
+    const { menuOpen } = useMenu();
+    return <>
+        <main className={`${styles.relojesYPlata} ${menuOpen ? styles.menuAbierto : ""}`}>
+        <section className={styles["swiper-container"]}>
         <picture>
           <Swiper
             effect={"coverflow"}
@@ -51,15 +39,20 @@ const Catalogo: React.FC = () => {
               modifier: 1,
               slideShadows: true,
             }}
+            autoplay={{
+                delay: 2500, // Adjust the delay as needed
+                disableOnInteraction: false, // Keeps autoplay active after interactions
+              }}
+              loop={true} // Enables infinite looping
             onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-            modules={[EffectCoverflow]}
+            modules={[EffectCoverflow, Autoplay]}
           >
-            {joyas.map((joya: Joya, index: number) => (
+            {data.map((data, index) => (
               <SwiperSlide key={index}>
                 <picture>
                 <MotionImage
-                  src={joya.imagen}
-                  alt={joya.nombre}
+                  src={data.src}
+                  alt={data.alt}
                   width={200}
                   height={200}
                   initial={{ opacity: 0, y: 100 }}
@@ -71,16 +64,9 @@ const Catalogo: React.FC = () => {
             ))}
           </Swiper>
         </picture>
-      </section>
-      <article className={styles["joya-details"]}>
-        <h2>{joyas[activeIndex].nombre}</h2>
-        <p>Kilataje: {joyas[activeIndex].kilataje}</p>
-        <p>Tipo: {joyas[activeIndex].tipo}</p>
-        <p>Peso: {joyas[activeIndex].peso}</p>
-        <p>Medidas: {joyas[activeIndex].medidas}</p>
-      </article>
-    </main>
-  );
-};
+        </section>
+        </main>
+    </>
+}
 
-export default Catalogo;
+export default RelojesYPlata;

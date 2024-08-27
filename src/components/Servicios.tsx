@@ -37,11 +37,11 @@ const Servicios: React.FC = () => {
   return (
     <main className={`${styles.Servicios} ${menuOpen ? styles.menuAbierto : ""}`}>
       {sections.map((section, index) => (
-        <div key={index}>
+        <section key={index}>
           <span>{section.icon}</span>
           <h3>{section.title}</h3>
           <p>{section.description}</p>
-        </div>
+        </section>
       ))}
     </main>
   );
