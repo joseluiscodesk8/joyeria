@@ -36,10 +36,10 @@ const Formulario: React.FC = () => {
   };
 
   return (
-    <div className={styles.contenedor}>
+    <div className={`${styles.contenedor} ${menuOpen ? styles.menuAbierto : ""}`}>
       {!submitted ? (
         <motion.form
-          className={`${styles.formulario} ${menuOpen ? styles.menuAbierto : ""}`}
+          className={styles.formulario}
           onSubmit={handleSubmit}
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}

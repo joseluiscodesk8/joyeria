@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 
+import { hostname } from 'os';
 import path from 'path';
 
 const nextConfig = {
@@ -39,6 +40,22 @@ const nextConfig = {
         {
           protocol: 'https',
           hostname: 'http2.mlstatic.com', 
+        },
+        {
+          protocol: 'https',
+          hostname: 'i.pinimg.com',
+        },
+        {
+          protocol: 'https',
+          hostname: 'www.verajoya.es',
+        },
+        {
+          protocol: 'https',
+          hostname: 's1.elespanol.com',
+        },
+        {
+          protocol: 'https',
+          hostname: 'images.squarespace-cdn.com',
         },
       ]
     },
