@@ -1,13 +1,7 @@
-import dynamic from "next/dynamic";
 import { Inter } from "next/font/google";
 
-
-import { MenuProvider } from '../../context/MenuContext';
 import "../../styles/globals.scss";
 
-
-const DynamicMenu = dynamic(() => import('../../components/Menu'));
-const DynamicFooter = dynamic(() => import('../../components/Footer'));
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <MenuProvider><body className={inter.className}><DynamicMenu />{children} <DynamicFooter /></body></MenuProvider>
+      <body className={inter.className}>{children}</body>
     </html>
   )
 }

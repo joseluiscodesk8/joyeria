@@ -1,16 +1,16 @@
 'use client'
 
-import dynamic from "next/dynamic"
+import { NextPage } from "next";
+import dynamic from "next/dynamic";
 
-const DynamicSlider = dynamic(() => import('../../components/Slider'));
-const DynamicService = dynamic(() => import('../../components/Servicios'));
+const DynamicLogo = dynamic(() => import('../../components/Logo'));
+const DynamicCatalogo = dynamic(() => import('../../components/Catalogo'));
 
-
-export default function Home() {
-  return (
-    <>
-    <DynamicSlider />
-    <DynamicService />
-    </>
-  )
+const Home:NextPage = () => {
+  return <>
+  <DynamicLogo />
+    <DynamicCatalogo />
+  </>
 }
+
+export default Home;
