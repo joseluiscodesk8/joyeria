@@ -1,20 +1,7 @@
 @use './components/Catalogo';
 
-
-  
-  .menuAbierto {
-    opacity: 0;
-    position: relative;
-    z-index: -1000;
-    transition: .5s ease-in-out;
-  }
-
-
-  .imageSlider {
-    display: flex;
-    height: 400px;
-
-    @media screen and (min-width: 800px) {
-      height: 600px;
-    }
-  }
+.Logo {
+  display: grid;
+  place-content: center;
+  padding: 2%;
+}
